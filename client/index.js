@@ -1,18 +1,17 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch   } from 'react-router-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
+import todoApp from '../reducers';
 import App from './components/App';
-import Greetings from './components/Greetings';
-import SignupPage from './components/signup/SignupPage';
+
+let store = createStore(todoApp);
 
 render(
-  <Router>
-    <App>
-      <Switch>
-        <Route exact path="/" component={Greetings} />
-        <Route path="/signup" component={SignupPage} />
-      </Switch>
-    </App>
-  </Router>
-, document.getElementById('app'));﻿
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+)

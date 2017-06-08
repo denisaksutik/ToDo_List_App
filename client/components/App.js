@@ -1,15 +1,14 @@
-import React from 'react';
-import NavigationBar from './NavigationBar';
+import React from 'react'
+import Footer from './Footer'
+import AddTodo from '../containers/AddTodo'
+import VisibleTodoList from '../containers/VisibleTodoList'
 
-class App extends React.Component {
-	render() {
-		return (
-			<div className="container">
-				<NavigationBar />
-				{this.props.children}
-			</div>
-			);
-		}
-	}
+const App = () => (
+  <div>
+    <AddTodo />
+    <VisibleTodoList />
+    <Footer />
+  </div>
+)
 
-	export default App;
+export default App;
