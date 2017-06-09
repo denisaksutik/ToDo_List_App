@@ -1,0 +1,47 @@
+.wallpaper {
+	margin: 0 auto;
+	position: absolute;
+	text-align: center;
+	bottom: 0.1px;
+	background: url(../img/fon1.png) no-repeat center center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  .all_elem {
+  	margin: 150px 0 0 120px;
+  }
+  form {
+  	font-size: 27px;
+   	border-radius: 20px;
+   	input {
+   		margin-bottom: 20px;
+   	}
+  }
+  button {
+  	font-size: 21px;
+  	margin: 0 0 5px 21px;
+  	border-radius: 10px;
+  }
+  ol {
+  		max-width: 220px;
+  		margin: 0 auto;
+  		margin-top: 20px;
+  	li {
+  		font-size: 27px;
+  		padding-top: 15px;
+  		cursor: pointer;
+  		text-align: left;
+  	}
+  }
+  .footer {
+  	padding-top: 50px;
+  	margin-right: 90px;
+  	font-size: 17px;
+  	p {
+  		cursor: pointer;
+  	}
+  }
+}

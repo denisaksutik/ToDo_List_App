@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter as Router, Route, Switch   } from 'react-router-dom';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-import todoApp from '../reducers';
+import style from '../src/styles/main.scss';
+import todoApp from './reducers';
 import App from './components/App';
 
 let store = createStore(todoApp);
@@ -14,4 +14,8 @@ render(
     <App />
   </Provider>,
   document.getElementById('app')
-)
+);
+
+if (module.hot) {
+  module.hot.accept();
+}

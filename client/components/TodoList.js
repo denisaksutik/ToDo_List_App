@@ -1,8 +1,10 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import Todo from './Todo';
 
 const TodoList = ({ todos, onTodoClick }) => (
-  <ul>
+  <ol>
     {todos.map(todo =>
       <Todo
         key={todo.id}
@@ -10,7 +12,7 @@ const TodoList = ({ todos, onTodoClick }) => (
         onClick={() => onTodoClick(todo.id)}
       />
     )}
-  </ul>
+  </ol>
 )
 
 TodoList.propTypes = {
